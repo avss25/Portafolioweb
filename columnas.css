@@ -1,0 +1,23 @@
+.columnas{
+	column-count: 3;
+	column-gap: 20px;
+	column-rule-style: solid;
+	column-rule-color: red;
+	column-rule-width: 1px;
+	column-width: 150px;
+	columns: 100px 3;
+}
+
+p{
+	text-align: justify;
+}
+
+.titulo2{
+	column-span: all;
+}
+
+#imagen{
+	visibility: visible;
+	width: 20%;
+
+}

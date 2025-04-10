@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volkswagen Potosina - Compras Online</title>
+</head>
+<body>
+    <h1>Volkswagen Potosina</h1>
+    <h2>Compras online</h2>
+    <form>
+        <fieldset>
+            <legend>Información general del cliente</legend>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required><br><br>
+
+            <label for="apellidoP">Apellido paterno:</label>
+            <input type="text" id="apellidoP" name="apellidoP"><br><br>
+
+            <label for="apellidoM">Apellido materno:</label>
+            <input type="text" id="apellidoM" name="apellidoM"><br><br>
+
+            <label for="usuario">Nombre de usuario:</label>
+            <input type="text" id="usuario" name="usuario" required><br><br>
+
+            <label for="password">Contraseña:</label>
+            <input type="password" id="password" name="password" required><br><br>
+
+            <label for="fechaRegistro">Fecha de registro:</label>
+            <input type="date" id="fechaRegistro" name="fechaRegistro"><br><br>
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>Datos para facturar</legend>
+            <label for="pais">País:</label>
+            <select id="pais" name="pais">
+                <option value="mexico">México</option>
+                <option value="canada">Canadá</option>
+                <option value="reinoUnido">Reino Unido</option>
+            </select><br><br>
+
+            <label for="ciudad">Ciudad:</label>
+            <select id="ciudad" name="ciudad">
+                <option value="slp">San Luis Potosí</option>
+                <option value="monterrey">Monterrey</option>
+                <option value="cdValles">Cd. Valles</option>
+            </select><br><br>
+
+            <label for="numeroExterior">Número exterior:</label>
+            <input type="number" id="numeroExterior" name="numeroExterior"><br><br>
+
+            <label for="calle">Calle:</label>
+            <input type="text" id="calle" name="calle"><br><br>
+
+            <label for="colonia">Colonia:</label>
+            <input type="text" id="colonia" name="colonia"><br><br>
+
+            <label for="numeroCasa">Número de casa:</label>
+            <input type="number" id="numeroCasa" name="numeroCasa"><br><br>
+
+            <label for="rfc">R.F.C.:</label>
+            <input type="text" id="rfc" name="rfc" required><br><br>
+
+            <label for="cp">C.P.:</label>
+            <input type="text" id="cp" name="cp"><br><br>
+
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required><br><br>
+        </fieldset>
+        <br>
+        <input type="checkbox" id="terminos" name="terminos">
+        <label for="terminos">Acepto términos y condiciones</label><br><br>
+
+        <button type="submit">Enviar</button>
+        <button type="reset">Restablecer</button>
+    </form>
+    <footer>
+        <p>Febrero 2025, SLP</p>
+    </footer>
+</body>
+</html>
