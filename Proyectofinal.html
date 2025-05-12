@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atlético de San Luis - Sporelli</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #575757;
+        }
+        header {
+            background: url('Pagina-del-Atletico-San-Luis.jpg') no-repeat center center;
+            background-size: cover;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2em;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+        .main-image, .video-section, .gallery-section, .map-section {
+            text-align: center;
+            margin: 30px 0;
+        }
+        .main-image img, .gallery-section img {
+            max-width: 90%;
+            border-radius: 10px;
+        }
+        .container {
+            display: flex;
+            padding: 20px;
+        }
+        .filters {
+            width: 20%;
+            padding: 20px;
+            background: white;
+            border-radius: 5px;
+            margin-right: 20px;
+        }
+        .products {
+            width: 80%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .product {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin: 10px;
+            padding: 15px;
+            width: 250px;
+            text-align: center;
+        }
+        .product img {
+            max-width: 100%;
+            border-bottom: 1px solid #ddd;
+            margin-bottom: 10px;
+        }
+        .product h3 {
+            color: #333;
+            font-size: 16px;
+        }
+        .product p {
+            color: #666;
+            font-size: 14px;
+        }
+        .product button {
+            background-color: #d32f2f;
+            border: none;
+            color: #fff;
+            cursor: pointer;
+            padding: 10px;
+            width: 100%;
+        }
+        .product button:hover {
+            background-color: #b71c1c;
+        }
+        iframe {
+            border: none;
+            width: 90%;
+            height: 400px;
+            margin: 0 auto;
+        }
+        .gallery-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .gallery-images {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
+        .gallery-images img {
+            width: 200px;
+            height: auto;
+            border-radius: 10px;
+        }
+        h2 {
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        ATLÉTICO DE SAN LUIS
+    </header>
+
+    <div class="main-image">
+        <img src="https://acdn-us.mitiendanube.com/stores/005/439/403/categories/mesa-de-trabajo-2-568dc36955ae20736e17418401386228-1920-1920.png" alt="Atlético de San Luis">
+    </div>
+
+    <div class="video-section">
+        <h2>Video Promocional</h2>
+        <iframe src="https://www.youtube.com/embed/sCHkha33BdI" allowfullscreen></iframe>
+
+    </div>
+
+        <div class="container">
+        <div class="filters">
+            <h3>Filtrar por</h3>
+            <label><input type="checkbox"> Amarillo</label><br>
+            <label><input type="checkbox"> Azul</label><br>
+            <label><input type="checkbox"> Blanco</label><br>
+            <label><input type="checkbox"> Negro</label><br>
+            <label><input type="checkbox"> Rojo</label><br>
+        </div>
+        <div class="products">
+            <div class="product">
+                <img src="https://acdn-us.mitiendanube.com/stores/005/439/403/products/adsl-jersey-alternativo-caballero-705a5920d24570071917413874429523-1024-1024.webp" alt="Jersey Alternativo">
+                <h3>Jersey Alternativo Oficial</h3>
+                <p>$1,389.00</p>
+                <button>Comprar</button>
+            </div>
+            <div class="product">
+                <img src="https://acdn-us.mitiendanube.com/stores/005/439/403/products/adsl-local-caballero-075cbbcab0e2bf623517364423390031-1024-1024.webp" alt="Jersey RojiBlanco">
+                <h3>Jersey Rojiblanco Oficial</h3>
+                <p>$1,389.00</p>
+                <button>Comprar</button>
+            </div>
+            <div class="product">
+                <img src="https://acdn-us.mitiendanube.com/stores/005/439/403/products/jersey-dia-de-muertos-oficial-atletico-de-san-luis-caballero-2425-1f943edfadf2115b5d17328041920804-1024-1024.webp" alt="Jersey Día de Muertos">
+                <h3>Jersey Día de Muertos</h3>
+                <p>$589.00</p>
+                <button>Comprar</button>
+            </div>
+            <div class="product">
+                <img src="https://acdn-us.mitiendanube.com/stores/005/439/403/products/adsl-visita-caballero-79801b6a377a6d860017364424254874-1024-1024.webp" alt="Jersey Auriazul">
+                <h3>Jersey Auriazul Oficial</h3>
+                <p>$1,389.00</p>
+                <button>Comprar</button>
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="gallery-section">
+        <h2>Galería</h2>
+        <div class="gallery-images">
+            <img src="estadio.jpg" alt="Estadio">
+            <img src="equipo.jpg" alt="Equipo">
+            <img src="hinchada.jpg" alt="Afición">
+            <img src="campeones.jpg" alt ="campeones">
+        </div>
+    </div>
+
+        <div class="map-section">
+        <h2>Ubicación del Estadio</h2>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3732.2002945911184!2d-100.97326268506914!3d22.14544378539302!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x842a98312947e0e3%3A0xf8f7768b3b4b708!2sEstadio%20Alfonso%20Lastras%20Ram%C3%ADrez!5e0!3m2!1ses!2smx!4v1619193839473!5m2!1ses!2smx" allowfullscreen></iframe>
+    </div>
+    <div class="help-section" style="background-color: #f4f4f4; padding: 40px; color: #333;">
+    <h2 style="text-align: center;">Ayuda y Soporte</h2>
+    
+    <div class="faq" style="max-width: 800px; margin: auto;">
+        <h3>Preguntas Frecuentes</h3>
+        <ul>
+            <li><strong>¿Dónde puedo comprar los jerseys oficiales?</strong><br>
+            En esta misma página, en la sección de productos, puedes dar clic en "Comprar".</li>
+
+            <li><strong>¿Cuánto tarda el envío?</strong><br>
+            El tiempo estimado de entrega es de 3 a 7 días hábiles dependiendo de tu ubicación.</li>
+
+            <li><strong>¿Se puede devolver un producto?</strong><br>
+            Sí, contamos con una política de devoluciones de hasta 15 días después de la compra.</li>
+        </ul>
+    </div>
+
+    <div class="support-groups" style="max-width: 800px; margin: auto; margin-top: 30px;">
+        <h3>Grupos de Ayuda</h3>
+        <p>Únete a la comunidad de fanáticos del Atlético de San Luis en nuestras redes y foros para compartir experiencias, recibir apoyo y estar al tanto de las novedades.</p>
+        <ul>
+            <li><a href="https://www.facebook.com/AtleticodeSanLuis" target="_blank">Grupo de Fans en Facebook</a></li>
+            <li><a href="https://twitter.com/AtletideSanLuis" target="_blank">Comunidad en Twitter</a></li>
+            <li><a href="https://www.instagram.com/atletidesanluis/" target="_blank">Grupo en Instagram</a></li>
+        </ul>
+    </div>
+
+    <div class="social-media" style="max-width: 800px; margin: auto; margin-top: 30px;">
+        <h3>Síguenos en Redes Sociales</h3>
+        <p>Para más noticias, promociones y cobertura exclusiva:</p>
+        <ul>
+            <li><a href="https://www.facebook.com/AtleticodeSanLuis" target="_blank">Facebook</a></li>
+            <li><a href="https://twitter.com/AtletideSanLuis" target="_blank">Twitter</a></li>
+            <li><a href="https://www.instagram.com/atletidesanluis/" target="_blank">Instagram</a></li>
+            <li><a href="https://www.youtube.com/@atletidesanluis" target="_blank">YouTube</a></li>
+        </ul>
+    </div>
+</div>
+<div class="form-section" style="padding: 40px; background-color: #e0e0e0; color: #333;">
+    <h2 style="text-align: center;">Formulario de Compra</h2>
+    <form id="salesForm" style="max-width: 600px; margin: auto; background: white; padding: 20px; border-radius: 8px;">
+        <label>Nombre completo:</label><br>
+        <input type="text" id="name" required><br><br>
+
+        <label>Correo electrónico:</label><br>
+        <input type="email" id="email" required><br><br>
+
+        <label>Producto:</label><br>
+        <select id="product" required onchange="updatePrice()">
+            <option value="">--Selecciona--</option>
+            <option value="Jersey Alternativo">Jersey Alternativo - $1,389.00</option>
+            <option value="Jersey Rojiblanco">Jersey Rojiblanco - $1,389.00</option>
+            <option value="Jersey Día de Muertos">Jersey Día de Muertos - $589.00</option>
+            <option value="Jersey Auriazul">Jersey Auriazul - $1,389.00</option>
+        </select><br><br>
+
+        <label>Cantidad:</label><br>
+        <input type="number" id="quantity" min="1" value="1" onchange="calculateTotal()" required><br><br>
+
+        <p><strong>Total:</strong> <span id="totalAmount">$0.00</span></p>
+
+        <button type="button" onclick="submitForm()">Finalizar Compra</button>
+        <button type="button" onclick="generatePDF()">Generar Comprobante (PDF)</button>
+    </form>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script>
+    const prices = {
+        "Jersey Alternativo": 1389,
+        "Jersey Rojiblanco": 1389,
+        "Jersey Día de Muertos": 589,
+        "Jersey Auriazul": 1389
+    };
+
+    function updatePrice() {
+        calculateTotal();
+    }
+
+    function calculateTotal() {
+        const product = document.getElementById('product').value;
+        const quantity = parseInt(document.getElementById('quantity').value || 1);
+        const price = prices[product] || 0;
+        const total = price * quantity;
+        document.getElementById('totalAmount').innerText = `$${total.toFixed(2)}`;
+    }
+
+    function submitForm() {
+        const name = document.getElementById('name').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const product = document.getElementById('product').value;
+        const quantity = document.getElementById('quantity').value;
+
+        if (!name || !email || !product || quantity < 1) {
+            alert("Por favor completa todos los campos correctamente.");
+            return;
+        }
+
+        alert("Gracias por tu compra, " + name + ". Se enviará una confirmación a " + email + ".");
+    }
+
+    async function generatePDF() {
+        const { jsPDF } = window.jspdf;
+        const doc = new jsPDF();
+
+        const name = document.getElementById('name').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const product = document.getElementById('product').value;
+        const quantity = document.getElementById('quantity').value;
+        const total = document.getElementById('totalAmount').innerText;
+
+        doc.setFontSize(16);
+        doc.text("Comprobante de Compra", 20, 20);
+
+        doc.setFontSize(12);
+        doc.text(`Nombre: ${name}`, 20, 40);
+        doc.text(`Correo: ${email}`, 20, 50);
+        doc.text(`Producto: ${product}`, 20, 60);
+        doc.text(`Cantidad: ${quantity}`, 20, 70);
+        doc.text(`Total: ${total}`, 20, 80);
+        doc.text("¡Gracias por tu compra!", 20, 100);
+
+        doc.save("comprobante_compra.pdf");
+    }
+</script>
+<iframe 
+    src="https://landbot.online/v3/H-2929178-BXG8P1I4RO81B4N9/index.html" 
+    style="position: fixed; bottom: 20px; right: 20px; width: 350px; height: 500px; border: none; z-index: 9999;" 
+    title="Chatbot Atlético de San Luis">
+</iframe>
+</body>
+</html>
