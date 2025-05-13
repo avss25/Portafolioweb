@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Diagnóstico de Fútbol</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+  <h2>Formulario de Diagnóstico de Fútbol</h2>
+
+  <form id="quizForm">
+    <div class="question">
+      <p>1. ¿Cuántos jugadores tiene un equipo en el campo?</p>
+      <label>
+        <input type="radio" name="q1" value="1"> 11 jugadores
+      </label>
+      <label>
+        <input type="radio" name="q1" value="0"> 10 jugadores
+      </label>
+    </div>
+
+    <div class="question">
+      <p>2. ¿Cuál país ha ganado más Copas del Mundo?</p>
+      <label>
+        <input type="radio" name="q2" value="1"> Brasil
+      </label>
+      <label>
+        <input type="radio" name="q2" value="0"> Alemania
+      </label>
+    </div>
+
+    <div class="question">
+      <p>3. ¿Qué árbitro puede mostrar tarjeta roja?</p>
+      <label>
+        <input type="radio" name="q3" value="1"> Árbitro central
+      </label>
+      <label>
+        <input type="radio" name="q3" value="0"> Árbitro asistente
+      </label>
+    </div>
+
+    <button type="button" onclick="evaluateQuiz()">Evaluar</button>
+  </form>
+
+  <div id="result"></div>
+
+  <div id="chart-container">
+    <canvas id="resultsChart"></canvas>
+  </div>
+
+  <div style="text-align: center; margin-top: 1.5rem;">
+    <button onclick="generatePDF()">Descargar PDF</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

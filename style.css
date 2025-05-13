@@ -1,0 +1,47 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 2rem;
+  background-color: honeydew;
+}
+
+h2 {
+  text-align: center;
+  color: darkgreen;
+}
+
+.question {
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+}
+
+label {
+  display: block;
+  margin: 0.5rem 0;
+  font-size: 1.3rem;
+}
+
+button {
+  margin-top: 1rem;
+  padding: 10px 20px;
+  background-color: forestgreen;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+button:hover {
+  background-color: seagreen;
+}
+
+#result,
+#chart-container {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+canvas {
+  max-width: 500px;
+  margin: 0 auto;
+}
