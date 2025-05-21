@@ -1,63 +1,71 @@
-let chart;
+const prices = {
+    "Jersey Alternativo": 1389,
+    "Jersey Rojiblanco": 1389,
+    "Jersey Día de Muertos": 589,
+    "Jersey Auriazul": 1389
+};
 
-function evaluateQuiz() {
-  const totalQuestions = 3;
-  const results = [];
-  let score = 0;
-
-  for (let i = 1; i <= totalQuestions; i++) {
-    const answer = document.querySelector(`input[name="q${i}"]:checked`);
-    const value = answer ? parseInt(answer.value) : 0;
-    results.push(value);
-    score += value;
-  }
-
-  const percentage = (score / totalQuestions) * 100;
-  document.getElementById("result").innerHTML =
-    `<h3>Tu puntuación: ${score}/${totalQuestions} (${percentage}%)</h3>`;
-
-  renderChart(results);
+function updatePrice() {
+    calculateTotal();
 }
 
-function renderChart(results) {
-  const ctx = document.getElementById('resultsChart').getContext('2d');
-  if (chart) chart.destroy();
-  chart = new Chart(ctx, {
-    type: 'bar',
-    data: {
-      labels: ['Pregunta 1', 'Pregunta 2', 'Pregunta 3'],
-      datasets: [{
-        label: 'Puntaje por pregunta',
-        data: results,
-        backgroundColor: results.map(v => v === 1 ? 'green' : 'red'),
-        borderColor: results.map(v => v === 1 ? 'darkgreen' : 'darkred'),
-        borderWidth: 1
-      }]
-    },
-    options: {
-      scales: {
-        y: {
-          beginAtZero: true,
-          max: 1
-        }
-      }
+function calculateTotal() {
+    const product = document.getElementById('product').value;
+    const quantity = parseInt(document.getElementById('quantity').value || 1);
+    const price = prices[product] || 0;
+    const total = price * quantity;
+    document.getElementById('totalAmount').innerText = `$${total.toFixed(2)}`;
+}
+
+function submitForm() {
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const product = document.getElementById('product').value;
+    const quantity = document.getElementById('quantity').value;
+
+    if (!name || !email || !product || quantity < 1) {
+        alert("Por favor completa todos los campos correctamente.");
+        return;
     }
-  });
+
+    alert(`Gracias por tu compra, ${name}. Se enviará una confirmación a ${email}.`);
 }
 
-function generatePDF() {
-  const { jsPDF } = window.jspdf;
-  const doc = new jsPDF();
+async function generatePDF() {
+    const { jsPDF } = window.jspdf;
+    const doc = new jsPDF();
 
-  doc.text("Resultados del Diagnóstico de Fútbol", 10, 10);
-  const resultText = document.getElementById("result").innerText;
-  doc.text(resultText, 10, 20);
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const product = document.getElementById('product').value;
+    const quantity = document.getElementById('quantity').value;
+    const total = document.getElementById('totalAmount').innerText;
 
-  doc.addPage();
-
-  const canvas = document.getElementById("resultsChart");
-  const imgData = canvas.toDataURL("image/png");
-  doc.addImage(imgData, 'PNG', 10, 20, 180, 100);
-
-  doc.save("diagnostico_futbol.pdf");
+    doc.setFontSize(16);
+    doc.text("Comprobante de Compra", 20, 20);
+    doc.setFontSize(12);
+    doc.text(`Nombre: ${name}`, 20, 40);
+    doc.text(`Correo: ${email}`, 20, 50);
+    doc.text(`Producto: ${product}`, 20, 60);
+    doc.text(`Cantidad: ${quantity}`, 20, 70);
+    doc.text(`Total: ${total}`, 20, 80);
+    doc.text("¡Gracias por tu compra!", 20, 100);
+    doc.save("comprobante_compra.pdf");
 }
+
+document.querySelectorAll(".collapsible").forEach(button => {
+    button.addEventListener("click", function () {
+        this.classList.toggle("active");
+        const content = this.nextElementSibling;
+        content.style.display = (content.style.display === "block") ? "none" : "block";
+    });
+});
+
+document.querySelectorAll('.color-filter').forEach(filter => {
+    filter.addEventListener('change', function () {
+        const selectedColor = this.value;
+        document.querySelectorAll('.product').forEach(product => {
+            product.style.display = (product.getAttribute('data-color') === selectedColor) ? 'block' : 'none';
+        });
+    });
+});

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atlético de San Luis - Sporelli</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        ATLÉTICO DE SAN LUIS
+    </header>
+
+    <div class="main-image">
+        <img src="https://acdn-us.mitiendanube.com/stores/005/439/403/categories/mesa-de-trabajo-2-568dc36955ae20736e17418401386228-1920-1920.png" alt="Atlético de San Luis">
+    </div>
+
+    <div class="video-section">
+        <h2>Video Promocional</h2>
+        <iframe src="https://www.youtube.com/embed/sCHkha33BdI" allowfullscreen></iframe>
+    </div>
+
+    <div class="container">
+        <div class="filters">
+            <h3>Filtrar por Color</h3>
+            <label><input type="checkbox" value="amarillo" class="color-filter"> Amarillo</label>
+            <label><input type="checkbox" value="azul" class="color-filter"> Azul</label>
+            <label><input type="checkbox" value="blanco" class="color-filter"> Blanco</label>
+            <label><input type="checkbox" value="negro" class="color-filter"> Negro</label>
+            <label><input type="checkbox" value="rojo" class="color-filter"> Rojo</label>
+            <label><input type="checkbox" value="rosa" class="color-filter"> Rosa</label>
+        </div>
+
+        <div class="products" id="product-list">
+           <div class="product" data-color="rosa">
+           <img src="https://acdn-us.mitiendanube.com/stores/005/439/403/products/adsl-cancer-de-mama-22218db9164e32cfff17345841738638-1024-1024.webp" alt="Jersey Conmemorativo">
+           <h3>Jersey Conmemorativo Oficial</h3>
+           <p>$1,389.00</p>
+            <button>Comprar</button>
+        </div>
+            <div class="product" data-color="rojo blanco">
+            <img src="https://acdn-us.mitiendanube.com/stores/005/439/403/products/adsl-local-caballero-075cbbcab0e2bf623517364423390031-1024-1024.webp" alt="Jersey Rojiblanco">
+            <h3>Jersey Rojiblanco</h3>
+            <p>$1,389.00</p>
+            <button>Comprar</button>
+        </div>
+        <div class="product" data-color="negro">
+        <img src="https://acdn-us.mitiendanube.com/stores/005/439/403/products/adsl-jersey-alternativo-caballero-705a5920d24570071917413874429523-1024-1024.webp" alt="Jersey Día de Muertos">
+        <h3>Jersey Día de Muertos</h3>
+        <p>$589.00</p>
+        <button>Comprar</button>
+    </div>
+    <div class="product" data-color="azul amarillo">
+        <img src="https://acdn-us.mitiendanube.com/stores/005/439/403/products/adsl-visita-nino-c9d4005287a212c00917364450756933-1024-1024.webp" alt="Jersey Auriazul">
+        <h3>Jersey Auriazul</h3>
+        <p>$1,389.00</p>
+        <button>Comprar</button>
+    </div>
+</div>
+
+
+    <div class="gallery-section">
+        <h2>Galería</h2>
+        <div class="gallery-images">
+            <img src="https://atleticodesanluis.mx/img/estadio/zoom/a1.jpg" alt="Estadio">
+            <img src="https://storage.atleticodesanluis.mx/photogallery_pics/med/3925.jpg" alt="Equipo">
+            <img src="https://cdn2.mediotiempo.com/uploads/media/2022/07/19/aficionados-atletico-san-luis-foto.jpg" alt="Afición">
+            <img src="https://st1.uvnimg.com/96/15/92d875da4df6a6543c18f088f931/imago-818699.jpg" alt="Campeones">
+        </div>
+    </div>
+
+    <div class="map-section">
+    <h2>Ubicación del Estadio</h2>
+    <iframe 
+        src="https://www.google.com/maps/place/Estadio+Alfonso+Lastras+Ram%C3%ADrez" 
+        width="100%" 
+        height="450" 
+        style="border:0;" 
+        allowfullscreen="" 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+</div>
+
+
+    <div class="help-section">
+        <h2>Ayuda y Soporte</h2>  
+        <button class="collapsible">Grupos de Ayuda</button>
+        <div class="content">
+        </div>
+
+        <button class="collapsible">Síguenos en Redes Sociales</button>
+        <div class="content">
+        </div>
+    </div>
+
+    <div class="form-section">
+        <h2>Formulario de Compra</h2>
+        <form id="salesForm">
+            <label>Nombre completo:</label><br>
+            <input type="text" id="name" required><br><br>
+            <label>Correo electrónico:</label><br>
+            <input type="email" id="email" required><br><br>
+            <label>Producto:</label><br>
+            <select id="product" required onchange="updatePrice()">
+                <option value="">--Selecciona--</option>
+                <option value="Jersey Alternativo">Jersey Alternativo - $1,389.00</option>
+                <option value="Jersey Rojiblanco">Jersey Rojiblanco - $1,389.00</option>
+                <option value="Jersey Día de Muertos">Jersey Día de Muertos - $589.00</option>
+                <option value="Jersey Auriazul">Jersey Auriazul - $1,389.00</option>
+            </select><br><br>
+            <label>Cantidad:</label><br>
+            <input type="number" id="quantity" min="1" value="1" onchange="calculateTotal()" required><br><br>
+            <p class="total"><strong>Total:</strong> <span id="totalAmount">$0.00</span></p>
+            <button type="button" onclick="submitForm()">Finalizar Compra</button>
+            <button type="button" onclick="generatePDF()">Generar Comprobante (PDF)</button>
+        </form>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+    document.querySelectorAll('.color-filter').forEach(filter => {
+        filter.addEventListener('change', filterProducts);
+    });
+
+    function filterProducts() {
+        const selectedColors = Array.from(document.querySelectorAll('.color-filter:checked'))
+            .map(cb => cb.value);
+
+        const products = document.querySelectorAll('.product');
+
+        products.forEach(product => {
+            const productColors = product.getAttribute('data-color').split(' ');
+            
+            if (selectedColors.length === 0 || selectedColors.some(color => productColors.includes(color))) {
+                product.style.display = 'block';
+            } else {
+                product.style.display = 'none';
+            }
+        });
+    }
+</script>
+
+
+    <iframe 
+        src="https://landbot.online/v3/H-2929178-BXG8P1I4RO81B4N9/index.html" 
+        title="Chatbot Atlético de San Luis"></iframe>
+</body>
+</html>
+
